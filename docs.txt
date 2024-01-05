@@ -1,0 +1,27 @@
+--1) users for main page.
+     go and sign up and create email & password.
+     but, you can enter using
+     *user@gmail.com
+     *user123
+
+--2) agent for agent page.
+     email = agent@gmail.com
+     password = agent123 
+
+--3) admin for agent page.
+     email = admin@gmail.com
+     password = admin123
+
+--4)
+     create 2 database 
+     "users" and "orders"
+      
+      You can find the databases in databases folder
+      import all the databases in MYSQL.
+
+
+use there links to jump various pages:
+ 
+localhost/Supercourier/main/login.php
+localhost/Supercourier/agent/login.php
+localhost/Supercourier/admin/login.php

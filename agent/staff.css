@@ -1,0 +1,259 @@
+/* custom color  */
+:root {
+    font-size: 16px;
+    --background: #e2e8fe;
+    --primary-color: #0933DC;
+    --secondary-color: #B6C4FC;
+    --accent: #274ad6;
+    --accent-dark: #1f3caf;
+    --text: #02040E;
+    --white: #ffffff;
+    --box-shadow: 10px 15px 15px 1px rgba(0, 0, 0, 0.14);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background);
+    font-family: 'poppins';
+    /* overflow: hidden; */
+}
+
+/* navbar  */
+
+
+.navbar {
+    position: fixed;
+    background-color: var(--accent);
+    transition: width 600ms ease;
+    overflow: hidden;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link>.icons {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--accent-dark);
+    color: var(--white);
+}
+
+.link-text {
+    display: none;
+    margin-left: 2rem;
+    margin-top: 5px;
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.logo {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+}
+
+.logo-text {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    .navbar:hover .logo svg {
+        margin-left: 11rem;
+    }
+
+    .navbar:hover .logo-text {
+        left: 0px;
+    }
+}
+
+.top-bar {
+    height: 65px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar h2 {
+    margin: 0px;
+    padding: 0px;
+    color: var(--text);
+    margin-left: 1rem;
+}
+
+.top-bar button {
+    margin: 0px;
+    padding: 0px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--accent);
+}
+
+.top-bar button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* main  */
+
+main {
+    margin-left: 5rem;
+}
+
+/* tabs /* // tabs // */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    /* margin-top: 50px; */
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc,
+table.dataTable thead>tr>th.sorting_asc_disabled,
+table.dataTable thead>tr>th.sorting_desc_disabled,
+table.dataTable thead>tr>td.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>td.sorting_asc_disabled,
+table.dataTable thead>tr>td.sorting_desc_disabled {
+    cursor: pointer;
+    position: relative;
+    padding-right: 26px;
+    /* text-align: center; */
+}

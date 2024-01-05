@@ -1,0 +1,51 @@
+/* custom color  */
+:root {
+    --background: #042A23;
+    --primary-color: #86F4E0;
+    --primary-color-2: #36dcbd;
+    --primary-color-3: #34bea5;
+    --secondary-color: #03211B;
+    --secondary-color-2: #11352e;
+    --accent: #14DBB7;
+    --text: #E8FDFA;
+    --box-shadow: 10px 10px 26px -1px rgba(0, 0, 0, 0.54);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 1rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+  }
+/* form  */
+.complain-box{
+    background-color: var(--secondary-color);
+    padding: 50px;
+    margin-top: 40px;
+    border-radius: 1rem;
+}
+.complain-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.complain-box form button {
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}

@@ -1,0 +1,41 @@
+body {
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    background-image: url(./images/pic1.jpg);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+.container-login {
+    width: min(500px, 100% - 2rem);
+    border-radius: 1rem;
+    padding: 50px 20px 50px 20px;
+    margin-inline: 20px;
+    background-color: #03211B;
+
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons a {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+form>.btn {
+    width: 100%;
+    background-color: #86F4E0;
+    color: #042A23;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+form>.btn:hover {
+    background-color: #14DBB7;
+}
